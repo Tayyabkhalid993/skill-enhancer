@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronDown,Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -13,9 +13,9 @@ import {
     SheetDescription,
     SheetHeader,
     SheetTrigger,
-  } from "@/components/ui/sheet"
-  
-  
+} from "@/components/ui/sheet"
+
+
 
 export default function Header() {
     return (
@@ -23,33 +23,33 @@ export default function Header() {
             <div className="flex justify-between items-center">
                 <h1 className="span-color bg-light text-2xl font-bold p-2 rounded-xl">SKILL ENHANCER</h1>
                 <nav>
-                <Sheet>
-  <SheetTrigger className="md:hidden px-2"><Menu/></SheetTrigger>
-  <SheetContent>
-    <SheetHeader>
-      <SheetDescription>
-        <ul>
-            <li className="font-bold text-lg m-5">Home</li>
-            <li className="font-bold text-lg m-5">Scholarships</li>
-            <li className="font-bold text-lg m-5">Free Courses</li>
-            <li className="font-bold text-lg m-5">About</li>
-            <li className="font-bold text-lg m-5">Contact</li>
-        </ul>
-      </SheetDescription>
-    </SheetHeader>
-  </SheetContent>
-</Sheet>
+                    <Sheet>
+                        <SheetTrigger className="md:hidden px-2"><Menu /></SheetTrigger>
+                        <SheetContent>
+                            <SheetHeader>
+                                <SheetDescription>
+                                    <ul>
+                                        <li className="font-bold text-lg m-5">Home</li>
+                                        <li className="font-bold text-lg m-5">Scholarships</li>
+                                        <li className="font-bold text-lg m-5">Free Courses</li>
+                                        <li className="font-bold text-lg m-5">About</li>
+                                        <li className="font-bold text-lg m-5">Contact</li>
+                                    </ul>
+                                </SheetDescription>
+                            </SheetHeader>
+                        </SheetContent>
+                    </Sheet>
                     <ul className="hidden md:flex font-bold">
                         <li className="px-4"><Link href={'./'}>Home</Link></li>
                         <li className="px-4 flex">
                             <DropdownMenu>
                                 <DropdownMenuTrigger>Scholarships</DropdownMenuTrigger>
-                                <ChevronDown/>
+                                <ChevronDown />
                                 <DropdownMenuContent>
                                     <DropdownMenuItem className="font-bold">Countries wise</DropdownMenuItem>
-                                    <DropdownMenuSeparator/>
+                                    <DropdownMenuSeparator />
                                     <DropdownMenuItem className="font-bold">Duration wise</DropdownMenuItem>
-                                    <DropdownMenuSeparator/>
+                                    <DropdownMenuSeparator />
                                     <DropdownMenuItem className="font-bold">Level wise</DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>

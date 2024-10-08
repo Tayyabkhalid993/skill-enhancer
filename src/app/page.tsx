@@ -18,43 +18,81 @@ export default function Home() {
         </div>
       </main>
 
-      {/*  Recommended Section  */}
+      {/*  Recommended Scholarships  */}
 
       <section className="sm:p-5 rounded-3xl my-5">
-        <h2 className="font-bold text-2xl my-8 border-b-4 border-orange-300 max-w-64">Recommended for you</h2>
+        <h2 className="font-bold text-2xl my-8 border-b-4 border-orange-300 max-w-80">Recommended Scholarships</h2>
         <div className="flex flex-wrap justify-start">
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
           </div>
         </div>
       </section>
+
+      {/*  Recommended Courses  */}
+
+<section className="sm:p-5 rounded-3xl my-5">
+  <h2 className="font-bold text-2xl my-8 border-b-4 border-orange-300 max-w-72">Recommended Courses</h2>
+  <div className="flex flex-wrap justify-start">
+    <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
+      <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
+      <h3 className="text-xl font-bold my-2">Course Title 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
+    </div>
+    <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
+      <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
+      <h3 className="text-xl font-bold my-2">Course Title 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
+    </div>
+    <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
+      <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
+      <h3 className="text-xl font-bold my-2">Course Title 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
+    </div>
+    <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
+      <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></Image>
+      <h3 className="text-xl font-bold my-2">Course Title 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
+    </div>
+    <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
+      <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></Image>
+      <h3 className="text-xl font-bold my-2">Course Title 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
+    </div>
+    <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
+      <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></Image>
+      <h3 className="text-xl font-bold my-2">Course Title 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum facilisis.</p>
+    </div>
+  </div>
+</section>
 
       {/* Popular Countries Image Section */}
 
@@ -113,69 +151,69 @@ export default function Home() {
       <section className="p-5 rounded-3xl">
         <h2 className="font-bold text-2xl my-8 border-b-4 border-orange-300 max-w-40">Just Landed</h2>
         <div className="flex flex-wrap justify-start">
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 1"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
-          </div> <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          </div> <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
               facilisis.</p>
           </div>
-          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-3 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
