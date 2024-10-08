@@ -8,7 +8,7 @@ export default function Home() {
 
     <div>
       <main className="sm:grid grid-cols-2 min-h-16 mx-6">
-        <div className="text-2xl h-52 sm:text-5xl sm:h-full bg-light flex items-center px-5 rounded-3xl">
+        <div className="text-3xl h-64 sm:text-5xl sm:h-full bg-light flex items-center px-5 rounded-3xl">
           <h1>
             Your <span className="span-color font-bold">skill-enhanced</span> journey leads to growth and opportunity.
           </h1>
@@ -20,7 +20,7 @@ export default function Home() {
 
       {/*  Recommended Section  */}
 
-      <section className="sm:p-5 rounded-3xl m-5">
+      <section className="sm:p-5 rounded-3xl my-5">
         <h2 className="font-bold text-2xl my-8 border-b-4 border-orange-300 max-w-64">Recommended for you</h2>
         <div className="flex flex-wrap justify-start">
           <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
@@ -58,11 +58,11 @@ export default function Home() {
 
       {/* Popular Countries Image Section */}
 
-      <section className="p-5 rounded-3xl m-5 mt-16">
+      <section className="p-5 rounded-3xl my-5 mt-16">
         <h2 className="font-bold text-2xl my-8 border-b-4 border-orange-300 max-w-96">
           Popular Countries Scholarships
         </h2>
-        <div>
+        <div className="mx-5">
           <ul className="sm:flex space-x-4 gap-8">
             <li className="shadow-xl duration-500 hover:-translate-y-5 my-8">
               <Link href={'./about'} target="_blank">
@@ -142,6 +142,33 @@ export default function Home() {
               facilisis.</p>
           </div>
           <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+            <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
+            Image>
+            <h3 className="text-xl font-bold my-2">Course Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
+              facilisis.</p>
+          </div>
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+            <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
+            Image>
+            <h3 className="text-xl font-bold my-2">Course Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
+              facilisis.</p>
+          </div>
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+            <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
+            Image>
+            <h3 className="text-xl font-bold my-2">Course Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
+              facilisis.</p>
+          </div>
+          <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
+            <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
+            Image>
+            <h3 className="text-xl font-bold my-2">Course Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum
+              facilisis.</p>
+          </div> <div className="shadow-lg p-5 rounded-3xl max-w-72 mx-5 my-4">
             <Image src={'/American-University.webp'} height={200} width={200} alt="course image 2"></
             Image>
             <h3 className="text-xl font-bold my-2">Course Title 2</h3>
