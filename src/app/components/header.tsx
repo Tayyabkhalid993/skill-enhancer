@@ -21,7 +21,7 @@ export default function Header() {
     return (
         <header className="px-7 py-5">
             <div className="flex justify-between items-center">
-                <h1 className="span-color bg-light text-2xl font-bold p-2 rounded-xl">SKILL ENHANCER</h1>
+                <h1 className="span-color bg-light text-2xl md:text-base lg:text-2xl font-bold p-2 rounded-xl">SKILL ENHANCER</h1>
                 <nav>
                     <Sheet>
                         <SheetTrigger className="md:hidden px-2"><Menu /></SheetTrigger>
@@ -29,11 +29,11 @@ export default function Header() {
                             <SheetHeader>
                                 <SheetDescription>
                                     <ul>
-                                        <li className="font-bold text-lg m-5">Home</li>
-                                        <li className="font-bold text-lg m-5">Scholarships</li>
-                                        <li className="font-bold text-lg m-5">Free Courses</li>
-                                        <li className="font-bold text-lg m-5">About</li>
-                                        <li className="font-bold text-lg m-5">Contact</li>
+                                        <li className="font-bold text-lg ">Home</li>
+                                        <li className="font-bold text-lg ">Scholarships</li>
+                                        <li className="font-bold text-lg ">Free Courses</li>
+                                        <li className="font-bold text-lg ">About</li>
+                                        <li className="font-bold text-lg ">Contact</li>
                                     </ul>
                                 </SheetDescription>
                             </SheetHeader>
@@ -41,7 +41,7 @@ export default function Header() {
                     </Sheet>
                     <ul className="hidden md:flex font-bold">
                         <li className="px-4"><Link href={'./'}>Home</Link></li>
-                        <li className="px-4 flex">
+                        <li className="pl-2 flex outline-none">
                             <DropdownMenu>
                                 <DropdownMenuTrigger>Scholarships</DropdownMenuTrigger>
                                 <ChevronDown />
