@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Card, { FlagsCard, Heading } from "./components/card";
-import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -82,7 +81,6 @@ export default function Home() {
     <Card imageUrl="/American-University.webp" title="New Card 06" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
     </div>
     </section>
-    <Footer/>
     </div>
   );
 }
