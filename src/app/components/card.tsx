@@ -23,7 +23,7 @@ export const Heading = ({heading}:headType)=>{
 const Card = ({imageUrl,title,description}:CardType) => {
   return (
     <>
-    <div className="shadow-lg rounded-lg overflow-hidden flex flex-col justify-center items-center box-border p-10">
+    <div className="shadow-lg rounded-lg overflow-hidden flex flex-col justify-center items-center box-border p-10 dark:bg-slate-400">
      <div>
      <Image src={imageUrl} height={200} width={200} alt="course image 1"></Image>
      </div>

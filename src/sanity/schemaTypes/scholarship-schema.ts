@@ -19,6 +19,15 @@ export default {
             description: 'Title or heading of the scholarship.',
         },
         {
+            name: 'slug',
+            title: 'Slug',
+            type:'slug',
+            description: 'A unique identifier for the scholarship.',
+            options: {
+                source: 'heading',
+            },
+        },
+        {
             name: 'description',
             title: 'Description',
             type: 'array',
@@ -73,7 +82,7 @@ export default {
             of: [{ type: 'string' }],
             options: {
                 list: [
-                    { title: 'Undergraduate', value: 'Undergraduate' },
+                    { title: 'Undergraduate', value: 'undergraduate' },
                     { title: 'Postgraduate', value: 'postgraduate' },
                     { title: 'PhD', value: 'phd' },
                     { title: 'Diploma', value: 'diploma' },
@@ -81,6 +90,12 @@ export default {
                 layout: 'dropdown', // Ensures dropdown style
             },
         },
+        {
+            name: 'isRecommended',
+            title: 'Is Recommended',
+            type: 'boolean',
+            description: 'Set to true if this item is recommended',
+          },
         {
             name: 'ScholarshipType',
             title: 'Scholarship Type',

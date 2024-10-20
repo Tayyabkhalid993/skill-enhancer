@@ -1,9 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
-import Card, { FlagsCard, Heading } from "./components/card";
+import { FlagsCard, Heading } from "./components/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { client, urlFor } from "@/sanity/lib/client";
 
-export default function Home() {
+export const revalidate = 30; // revalidate every 30 seconds
+
+interface dataType {
+  heading : string,
+  image: any,
+  currentSlug: string,
+  isRecommended: boolean
+}
+
+export const getLatestScholarshipCard = async()=>{
+ const res = await client.fetch(`*[_type=='scholarship'] | order(_createdAt desc){
+  heading,
+  image,
+  'currentSlug':slug.current,
+  isRecommended
+}`);
+ return res
+}
+export const getRecScholarshipCard = async()=>{
+ const res = await client.fetch(`*[_type=='scholarship'  && isRecommended == true] | order(_createdAt desc){
+  heading,
+  image,
+  'currentSlug':slug.current,
+  isRecommended
+}`);
+ return res
+}
+
+export default async function Home() {
+  
+  
+  const data:dataType[] = await getLatestScholarshipCard();
+
+  const recData:dataType[]= await getRecScholarshipCard();
+
   return (
+
     // HomePage
 
     <div>
@@ -20,6 +57,7 @@ export default function Home() {
             height={450}
             width={450}
             alt="image"
+            priority
           ></Image>
         </div>
       </main>
@@ -30,30 +68,20 @@ export default function Home() {
     <Heading heading="Recommended Scholarships"></Heading>
     <div className="border-b-4 max-w-64 md:max-w-80 ml-7 border-orange-300 rounded"></div>
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 py-6 gap-5">
-    <Card imageUrl="/American-University.webp" title="New Card 01" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum "></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 02" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 03" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 04" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 05" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 06" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
+
+    {recData.map((post,idx)=> (
+      <Link href={`scholarship/${post.currentSlug}`}>
+  <Card key={idx} className="min-h-64 p-2 hover:transition-transform">
+    <Image src={urlFor(post.image).url()} alt="image" width={300} height={300} className="w-full"></Image>
+  <h3 className="font-bold mt-2">{post.heading}</h3>
+  </Card>
+      </Link>
+))}
+
+   
     </div>
     </section>
-
-      {/*  Recommended Courses  */}
-
-    <section>
-    <Heading heading="Recommended Courses"></Heading>
-    <div className="border-b-4 max-w-56 sm:max-w-72 ml-7 border-orange-300 rounded"></div>
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 py-6 gap-5">
-    <Card imageUrl="/American-University.webp" title="New Card 01" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum "></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 02" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 03" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 04" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 05" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 06" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    </div>
-    </section>
-
+    
       {/* Popular Countries Image Section */}
 
     <section className="p-5 rounded-3xl my-5 mt-16">
@@ -61,9 +89,9 @@ export default function Home() {
     <div className="border-b-4 max-w-44 sm:max-w-52 ml-7 border-orange-300 rounded"></div>
     <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] px-6 py-10 gap-5">
     <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-United-States-of-America.png" countryName="USA"></FlagsCard></Link>
-    <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-Canada.png" countryName="Canda"></FlagsCard></Link>
+    <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-Canada.png" countryName="Canada"></FlagsCard></Link>
     <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-Germany.png" countryName="Germany"></FlagsCard></Link>
-    <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-United-Kingdom.png" countryName="United KIngdom"></FlagsCard></Link>
+    <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-United-Kingdom.png" countryName="United Kingdom"></FlagsCard></Link>
     <Link href=""><FlagsCard imageUrl="/flagsofcountries/flag-of-Australia.png" countryName="Australia"></FlagsCard></Link>
    </div>
       </section>
@@ -73,12 +101,14 @@ export default function Home() {
     <Heading heading="Just Landed"></Heading>
     <div className="border-b-4 max-w-28 sm:max-w-36 ml-7 border-orange-300 rounded"></div>
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 py-6 gap-5">
-    <Card imageUrl="/American-University.webp" title="New Card 01" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum "></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 02" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 03" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 04" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 05" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
-    <Card imageUrl="/American-University.webp" title="New Card 06" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci id nisi dictum"></Card>
+    {data.map((post,idx)=> (
+      <Link href={`scholarship/${post.currentSlug}`}>
+      <Card key={idx} className="min-h-64 p-2">
+        <Image src={urlFor(post.image).url()} alt="image" width={300} height={300} className="object-cover"></Image>
+      <h3 className="font-bold mt-2">{post.heading}</h3>
+      </Card>
+      </Link>
+    ))}
     </div>
     </section>
     </div>

@@ -6,6 +6,10 @@
   @apply max-w-screen-2xl mx-auto px-4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .span-color {
   color: #fc724d;
 }
