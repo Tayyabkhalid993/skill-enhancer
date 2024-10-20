@@ -7,8 +7,8 @@ export const revalidate = 30; // revalidate every 30 seconds
 interface scholarshipDetails {
     currentSlug: string,
     heading: string,
-    description: any,
-    image: any
+    description: unknown,
+    image: unknown
 }
 
 async function getData(slug: string){

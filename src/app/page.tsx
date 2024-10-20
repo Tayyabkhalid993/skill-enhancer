@@ -8,7 +8,7 @@ export const revalidate = 30; // revalidate every 30 seconds
 
 interface dataType {
   heading : string,
-  image: any,
+  image: unknown,
   currentSlug: string,
   isRecommended: boolean
 }

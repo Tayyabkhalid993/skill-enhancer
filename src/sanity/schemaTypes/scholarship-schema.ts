@@ -1,4 +1,4 @@
-export default {
+const scholarship = {
     name: 'scholarship',
     title: 'Scholarship',
     type: 'document',
@@ -112,3 +112,5 @@ export default {
         },
     ],
 };
+
+export default scholarship;
