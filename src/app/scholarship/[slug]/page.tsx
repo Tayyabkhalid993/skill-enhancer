@@ -2,6 +2,8 @@ import { client, urlFor } from "@/sanity/lib/client"
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import { TypedObject } from '@portabletext/types';
+
 
 
 export const revalidate = 30; // revalidate every 30 seconds
@@ -9,7 +11,7 @@ export const revalidate = 30; // revalidate every 30 seconds
 interface scholarshipDetails {
     currentSlug: string,
     heading: string,
-    description: string,
+    description: TypedObject,
     image: SanityImageSource
 }
 
