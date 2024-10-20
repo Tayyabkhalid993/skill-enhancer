@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FlagsCard, Heading } from "./components/card";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { client, urlFor } from "@/sanity/lib/client";
 
 export const revalidate = 30; // revalidate every 30 seconds
@@ -70,8 +70,8 @@ export default async function Home() {
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 py-6 gap-5">
 
     {recData.map((post,idx)=> (
-      <Link href={`scholarship/${post.currentSlug}`}>
-  <Card key={idx} className="min-h-64 p-2 hover:transition-transform">
+      <Link key={idx} href={`scholarship/${post.currentSlug}`}>
+  <Card className="min-h-64 p-2 hover:transition-transform">
     <Image src={urlFor(post.image).url()} alt="image" width={300} height={300} className="w-full"></Image>
   <h3 className="font-bold mt-2">{post.heading}</h3>
   </Card>
@@ -102,8 +102,8 @@ export default async function Home() {
     <div className="border-b-4 max-w-28 sm:max-w-36 ml-7 border-orange-300 rounded"></div>
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 py-6 gap-5">
     {data.map((post,idx)=> (
-      <Link href={`scholarship/${post.currentSlug}`}>
-      <Card key={idx} className="min-h-64 p-2">
+      <Link key={idx} href={`scholarship/${post.currentSlug}`}>
+      <Card className="min-h-64 p-2">
         <Image src={urlFor(post.image).url()} alt="image" width={300} height={300} className="object-cover"></Image>
       <h3 className="font-bold mt-2">{post.heading}</h3>
       </Card>
