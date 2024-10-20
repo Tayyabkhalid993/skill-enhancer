@@ -3,12 +3,14 @@ import Link from "next/link";
 import { FlagsCard, Heading } from "./components/card";
 import { Card } from "@/components/ui/card";
 import { client, urlFor } from "@/sanity/lib/client";
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+
 
 export const revalidate = 30; // revalidate every 30 seconds
 
 interface dataType {
-  heading : string,
-  image: unknown,
+  heading: string,
+  image: SanityImageSource ,
   currentSlug: string,
   isRecommended: boolean
 }
