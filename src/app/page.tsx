@@ -13,7 +13,7 @@ interface dataType {
   isRecommended: boolean
 }
 
-export const getLatestScholarshipCard = async()=>{
+const getLatestScholarshipCard = async()=>{
  const res = await client.fetch(`*[_type=='scholarship'] | order(_createdAt desc){
   heading,
   image,
@@ -22,7 +22,7 @@ export const getLatestScholarshipCard = async()=>{
 }`);
  return res
 }
-export const getRecScholarshipCard = async()=>{
+const getRecScholarshipCard = async()=>{
  const res = await client.fetch(`*[_type=='scholarship'  && isRecommended == true] | order(_createdAt desc){
   heading,
   image,
