@@ -14,7 +14,7 @@ export default function About(){
                 <p className="text-justify text-lg">Skill-Enhancer is a comprehensive and dynamic platform designed to help students achieve their educational and career goals by providing access to international scholarships, free online courses, and onsite learning opportunities. We believe in the transformative power of education, not just for individual growth but for the development of society at large. On our site, you will discover a vast array of resources, including scholarships, grants, financial support, and free educational courses from leading institutions and platforms worldwide.</p>
                 <br />
 
-                <p className="text-justify text-lg">Our mission is to make education accessible to all, regardless of financial background. Beyond scholarships, we offer free and low-cost online and onsite courses that provide valuable skills in a wide range of fields. Whether you're a student aiming for a degree or a professional looking to enhance your skills, you’ll find the information and opportunities that suit your needs.</p>
+                <p className="text-justify text-lg">Our mission is to make education accessible to all, regardless of financial background. Beyond scholarships, we offer free and low-cost online and onsite courses that provide valuable skills in a wide range of fields. Whether {`you're`} a student aiming for a degree or a professional looking to enhance your skills, {`you’ll`} find the information and opportunities that suit your needs.</p>
                 <br />
 
                 <p className="text-justify text-lg">Alongside scholarship opportunities, our platform guides you through the entire application process and offers practical resources like study guides, how-to-apply instructions, and professional development tools. Our employment and career resources are designed to help you navigate the job market successfully after completing your education.</p>
@@ -25,6 +25,7 @@ export default function About(){
                 <br />
 
                 <p className="text-justify text-lg">At Skill-Enhancer, we are driven by the mission to promote higher education and skill development for everyone. We believe that education and knowledge should not be limited by financial barriers. Our platform connects talented students with global scholarship opportunities and provides free or affordable learning resources for skills enhancement.</p>
+                <br />
 
                 <p className="text-justify text-lg">Higher education is not only a gateway to personal growth but also a catalyst for innovation and societal progress. By helping students and professionals access scholarships and learning tools, we aim to build a global community of learners who are equipped to tackle the challenges of the future. Whether you aspire to earn a degree, advance your career, or simply broaden your knowledge, we are here to support your educational journey.</p>
             </div>
