@@ -44,10 +44,10 @@ export default function Header() {
                                         <li className=""><Accordion type="single" collapsible>
                                             <AccordionItem className="border-none " value="item-1">
                                                 <AccordionTrigger className="font-bold text-lg p-3">Scholarships</AccordionTrigger>
-                                                <AccordionContent className="font-bold">
+                                                <AccordionContent className="font-bold text-base">
                                                     Countries wise 
                                                 </AccordionContent>
-                                                <AccordionContent className="font-bold">
+                                                <AccordionContent className="font-bold text-base">
                                                     Level Wise
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -69,15 +69,19 @@ export default function Header() {
                                     Scholarships <ChevronDown className="ml-2" />
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
-                                    <DropdownMenuItem className="font-bold">Countries wise</DropdownMenuItem>
+                                    <DropdownMenuItem className="font-bold"><Link href={'/scholarshipdivision/countrieswise'}>Countries wise</Link></DropdownMenuItem>
                                     <DropdownMenuSeparator />
                                     {/* Duration wise with a Submenu */}
                                     <DropdownMenuSub>
                                         <DropdownMenuSubTrigger className="font-bold">Level wise</DropdownMenuSubTrigger>
                                         <DropdownMenuSubContent>
-                                            <DropdownMenuItem className="font-bold">Undergraduate</DropdownMenuItem>
+                                            <DropdownMenuItem className="font-bold"><Link href={'/scholarshipdivision/levelwise/undergraduate'}>Undergraduate Scholarship</Link></DropdownMenuItem>
                                             <DropdownMenuSeparator />
-                                            <DropdownMenuItem className="font-bold">Postgraduate</DropdownMenuItem>
+                                            <DropdownMenuItem className="font-bold"><Link href={'/scholarshipdivision/levelwise/masters'}>Masters Scholarship</Link></DropdownMenuItem>
+                                            <DropdownMenuSeparator /><DropdownMenuItem className="font-bold"><Link href={'/scholarshipdivision/levelwise/doctoral'}>Doctoral Scholarship</Link></DropdownMenuItem>
+                                            <DropdownMenuSeparator />
+                                            <DropdownMenuItem className="font-bold"><Link href={'/scholarshipdivision/levelwise/postdoctoral'}>Postdoctoral Scholarship</Link></DropdownMenuItem>
+                                            <DropdownMenuSeparator />
                                         </DropdownMenuSubContent>
                                     </DropdownMenuSub>
                                 </DropdownMenuContent>

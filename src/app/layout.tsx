@@ -27,12 +27,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <title>Scholarship Opportunities - Skills Enhancer</title>
+      <meta name="description" content="Unlock your potential with Skills Enhancer's scholarships. Apply now & boost your skills!"></meta>
+      <meta name="keywords" content="scholarship, skills development, online courses, education, career growth"></meta>
+      <meta property="og:title" content="Skills Enhancer Scholarship Program"></meta>
+      <meta property="og:description" content="Empower your future with Skills Enhancer's scholarships. Learn, grow & succeed!"></meta>
+      <meta property="og:url" content="[https://skill-enhancer.vercel.app/]"></meta>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased wrapper`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

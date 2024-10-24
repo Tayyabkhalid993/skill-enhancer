@@ -47,14 +47,14 @@ const scholarship = {
                     { title: 'Canada', value: 'canada' },
                     { title: 'Australia', value: 'australia' },
                     { title: 'Germany', value: 'germany' },
-                    { title: 'South Africa', value: 'southAfrica' },
+                    { title: 'South Africa', value: 'south-Africa' },
                     { title: 'China', value: 'china' },
                     { title: 'Japan', value: 'japan' },
-                    { title: 'Saudi Arabia', value: 'saudiArabia' },
+                    { title: 'Saudi Arabia', value: 'saudi-arabia' },
                     { title: 'Singapore', value: 'singapore' },
                     { title: 'Thailand', value: 'thailand' },
                     { title: 'UAE', value: 'uae' },
-                    { title: 'New Zealand', value: 'newZealand' },
+                    { title: 'New Zealand', value: 'new-zealand' },
                     { title: 'Austria', value: 'austria' },
                     { title: 'Belgium', value: 'belgium' },
                     { title: 'Denmark', value: 'denmark' },
@@ -83,8 +83,9 @@ const scholarship = {
             options: {
                 list: [
                     { title: 'Undergraduate', value: 'undergraduate' },
-                    { title: 'Postgraduate', value: 'postgraduate' },
+                    { title: 'Masters', value: 'masters' },
                     { title: 'PhD', value: 'phd' },
+                    { title: 'Postdoctoral', value: 'postdoctoral' },
                     { title: 'Diploma', value: 'diploma' },
                 ],
                 layout: 'dropdown', // Ensures dropdown style
