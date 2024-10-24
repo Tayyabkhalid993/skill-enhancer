@@ -45,10 +45,22 @@ export default function Header() {
                                             <AccordionItem className="border-none " value="item-1">
                                                 <AccordionTrigger className="font-bold text-lg p-3">Scholarships</AccordionTrigger>
                                                 <AccordionContent className="font-bold text-base">
-                                                    Countries wise 
+                                                  <Link href={'../scholarshipdivision/countrieswise'}> Countries wise</Link>  
                                                 </AccordionContent>
                                                 <AccordionContent className="font-bold text-base">
-                                                    Level Wise
+                                                    <Accordion type="single" collapsible>
+                                                        <AccordionItem className="border-none" value="item-2">
+                                                            <AccordionTrigger className="font-bold text-base">Level Wise</AccordionTrigger>
+                                                            <AccordionContent className="font-bold text-base">
+                                                                <ul>
+                                                                    <li className="py-2"><Link href={'/scholarshipdivision/levelwise/undergraduate'}>Undergraduate</Link></li>
+                                                                    <li className="py-2"><Link href={'/scholarshipdivision/levelwise/masters'}>Masters</Link></li>
+                                                                    <li className="py-2"><Link href={'/scholarshipdivision/levelwise/doctoral'}>Doctoral</Link></li>
+                                                                    <li className="py-2"><Link href={'/scholarshipdivision/levelwise/postdoctoral'}>Postdoctoral</Link></li>
+                                                                </ul>
+                                                            </AccordionContent>
+                                                        </AccordionItem>
+                                                    </Accordion>
                                                 </AccordionContent>
                                             </AccordionItem>
                                         </Accordion>

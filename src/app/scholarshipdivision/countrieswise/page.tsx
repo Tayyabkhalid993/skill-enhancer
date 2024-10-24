@@ -31,10 +31,10 @@ export default function CountriesWise() {
                 </div>
 
                 <div className="m-4 flex flex-col items-center">
-                    <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+                    <div className=" grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
                         {asianCountries.map((country, idx) => (
                             <Link key={idx} href={`/scholarshipdivision/countrieswise/scholarships/country/${country.slug}`}>
-                                <div className="cursor-pointer">
+                                <div className="cursor-pointer my-6 mx-2">
                                     <Image width={200} height={200} src={country.imageUrl} alt={country.name} className="ease-in duration-300 hover:scale-105" />
                                     <h3 className="font-bold text-center text-lg">{country.name}</h3>
                                 </div>
