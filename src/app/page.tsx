@@ -100,7 +100,7 @@ export default async function Home() {
       <Link key={idx} href={`scholarship/${post.currentSlug}`} className="hidden sm:block">
         <Card className="min-h-64 p-2 ease-in duration-300 hover:scale-105 ">
           <Image src={urlFor(post.image).url()} alt="image" width={300} height={300} className="w-full "></Image>
-          <h3 className="font-bold mt-2">{post.heading}</h3>
+          <h3 className="font-bold mt-2 text-center">{post.heading}</h3>
         </Card>
       </Link>
     ))}
@@ -108,7 +108,7 @@ export default async function Home() {
       <Link key={idx} href={`scholarship/${post.currentSlug}`} className="sm:hidden">
         <Card className="min-h-64 p-2  ease-in duration-300 hover:scale-105">
           <Image src={urlFor(post.image).url()} alt="image" width={300} height={300} className="w-full"></Image>
-          <h3 className="font-bold mt-2">{post.heading}</h3>
+          <h3 className="mt-2 text-center">{post.heading}</h3>
         </Card>
       </Link>
     ))}

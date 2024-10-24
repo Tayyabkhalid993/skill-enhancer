@@ -47,7 +47,7 @@ import Image from 'next/image';
                 height={300} 
                 className="w-full" 
               />
-              <h3 className="font-bold mt-2">{post.heading}</h3>
+              <h3 className="font-bold mt-2 text-center">{post.heading}</h3>
             </Card>
           </Link>
         ))}

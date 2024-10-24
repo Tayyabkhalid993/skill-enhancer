@@ -3,7 +3,7 @@ export default function About(){
     return(
         <section>
             <div className="text-center items-center my-12">
-            <h1 className="font-bold text-lg sm:text-2xl px-8 py-2 mt-10 underline decoration-orange-300 decoration-4 underline-offset-8">Welcome to Skill-Enhancer! We're excited to have you here.</h1>
+            <h1 className="font-bold text-2xl sm:text-3xl px-8 py-2 mt-10 underline decoration-orange-300 decoration-4 underline-offset-8">Welcome to Skill-Enhancer! We're excited to have you here.</h1>
             </div>
 
             <div className="mx-4">
